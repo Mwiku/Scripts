@@ -1,4 +1,5 @@
-#!/bin/bash
+#! /bin/bash
+
 #Create ssh key pair using the ed25519 algorithm
 echo "Enter a comment for your ssh key"
 read ssh_key_comment
@@ -9,6 +10,8 @@ read ssh_key_filename
 ssh-keygen -t ed25519 -f "$ssh_key_filename"  -C "$ssh_key_comment"
 
 #Copy the key to the jump server
+
+scp /
 ssh gapit@10.0.0.23
 
 
